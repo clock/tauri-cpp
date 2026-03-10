@@ -23,3 +23,5 @@ examples/*/src-tauri/target/
 examples/*/src-tauri/gen/
 cmake-build-*/
 smoke-test-result.json
+vs/UpgradeLog*.htm
+vs/UpgradeLog*.xml
