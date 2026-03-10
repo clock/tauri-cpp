@@ -107,6 +107,7 @@ npm run run:react_shadcn
 ## Docs
 
 - repo docs live in `docs/`
+- GitHub Pages at `https://clock.github.io/tauri-cpp/` is the primary public docs surface
 - the GitHub Pages site is built from `docs_site/`
 - existing project integration notes are in `docs/integration_existing_project.md`
 

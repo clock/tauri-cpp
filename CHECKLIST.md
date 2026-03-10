@@ -20,6 +20,7 @@
 - added root build manifests for CMake, Cargo workspace, and npm workspaces
 - added Windows first and unix secondary bootstrap scripts
 - added the docs site and GitHub Pages workflow
+- reworked the docs site route map, styling, and GitHub Pages base path
 - added the committed Visual Studio task solution
 - added the public c++ headers, native core, and unit tests
 - added the shared Rust host scaffold with a `cxx` bridge
