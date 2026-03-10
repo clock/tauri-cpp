@@ -17,8 +17,6 @@ Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "build", "build\build.vcxpro
 EndProject
 Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "test", "test\test.vcxproj", "{C4F247A8-A9C0-49B8-8990-446A6AEF929F}"
 EndProject
-Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "measure", "measure\measure.vcxproj", "{D09E86F4-6022-4770-8694-24DAE13E600E}"
-EndProject
 Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "package_plain_html", "package_plain_html\package_plain_html.vcxproj", "{0AE8C934-DA28-4268-B8B1-B2C4E6B0EB01}"
 EndProject
 Project("{BC8A1FFA-BEE3-4634-8014-F334798102B3}") = "package_vite_tailwind", "package_vite_tailwind\package_vite_tailwind.vcxproj", "{43644AA2-4216-4120-8EC4-F743CE200A0E}"
@@ -51,8 +49,6 @@ Global
 		{FD35C0A0-B7F8-4D2B-913B-9D3D0BC9D70D}.Release|x64.ActiveCfg = Release|x64
 		{C4F247A8-A9C0-49B8-8990-446A6AEF929F}.Debug|x64.ActiveCfg = Debug|x64
 		{C4F247A8-A9C0-49B8-8990-446A6AEF929F}.Release|x64.ActiveCfg = Release|x64
-		{D09E86F4-6022-4770-8694-24DAE13E600E}.Debug|x64.ActiveCfg = Debug|x64
-		{D09E86F4-6022-4770-8694-24DAE13E600E}.Release|x64.ActiveCfg = Release|x64
 		{0AE8C934-DA28-4268-B8B1-B2C4E6B0EB01}.Debug|x64.ActiveCfg = Debug|x64
 		{0AE8C934-DA28-4268-B8B1-B2C4E6B0EB01}.Release|x64.ActiveCfg = Release|x64
 		{43644AA2-4216-4120-8EC4-F743CE200A0E}.Debug|x64.ActiveCfg = Debug|x64
