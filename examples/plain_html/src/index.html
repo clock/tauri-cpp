@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>tauri-cpp plain html</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="panel">
+        <p class="eyebrow">plain html</p>
+        <h1>tauri-cpp</h1>
+        <p class="copy">
+          the lowest overhead starter in this repo. it uses plain html, css, and js with a small
+          tauri shell.
+        </p>
+        <div class="actions">
+          <button id="sync_button">run sync command</button>
+          <button id="async_button">run async command</button>
+          <button id="smoke_button">run smoke test</button>
+        </div>
+        <pre id="output">waiting for startup event</pre>
+      </section>
+    </main>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

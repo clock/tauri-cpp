@@ -1,0 +1,77 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(48, 86, 211, 0.32), transparent 32%),
+    linear-gradient(160deg, #0d1324, #111827 55%, #09101c);
+  color: #edf2ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.shell {
+  display: grid;
+  min-height: 100vh;
+  place-items: center;
+  padding: 24px;
+}
+
+.panel {
+  width: min(720px, 100%);
+  padding: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  background: rgba(5, 10, 20, 0.78);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #8bb8ff;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+}
+
+.copy {
+  max-width: 48ch;
+  color: #ccd6f6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 700;
+  color: #08111f;
+  background: #9ed3ff;
+  cursor: pointer;
+}
+
+pre {
+  margin: 0;
+  padding: 16px;
+  border-radius: 18px;
+  overflow: auto;
+  background: rgba(255, 255, 255, 0.06);
+}

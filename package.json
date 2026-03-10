@@ -1,0 +1,36 @@
+{
+  "name": "tauri-cpp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "windows first tauri + c++ starter with low friction setup",
+  "workspaces": [
+    "docs_site",
+    "examples/plain_html",
+    "examples/vite_tailwind",
+    "examples/react_shadcn"
+  ],
+  "scripts": {
+    "bootstrap:windows": "powershell -ExecutionPolicy Bypass -File ./scripts/bootstrap_windows.ps1",
+    "bootstrap:unix": "bash ./scripts/bootstrap_unix.sh",
+    "build:cpp": "cmake --build --preset windows-debug",
+    "configure:cpp": "cmake --preset windows-debug",
+    "test:cpp": "ctest --test-dir build/windows-debug --output-on-failure",
+    "package:plain_html": "powershell -ExecutionPolicy Bypass -File ./scripts/package_example.ps1 plain_html",
+    "package:vite_tailwind": "powershell -ExecutionPolicy Bypass -File ./scripts/package_example.ps1 vite_tailwind",
+    "package:react_shadcn": "powershell -ExecutionPolicy Bypass -File ./scripts/package_example.ps1 react_shadcn",
+    "docs:dev": "npm run docs:dev --workspace docs_site",
+    "docs:build": "npm run docs:build --workspace docs_site",
+    "docs:preview": "npm run docs:preview --workspace docs_site",
+    "build:plain_html": "npm run build --workspace examples/plain_html",
+    "build:vite_tailwind": "npm run build --workspace examples/vite_tailwind",
+    "build:react_shadcn": "npm run build --workspace examples/react_shadcn",
+    "build:examples": "npm run build:plain_html && npm run build:vite_tailwind && npm run build:react_shadcn"
+  },
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=9.0.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.1.0"
+  }
+}

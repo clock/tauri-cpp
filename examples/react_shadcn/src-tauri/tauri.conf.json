@@ -1,0 +1,33 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "tauri-cpp react shadcn",
+  "version": "0.1.0",
+  "identifier": "clock.tauri-cpp.react-shadcn",
+  "build": {
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:1422",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "tauri-cpp react shadcn",
+        "width": 1280,
+        "height": 720,
+        "minWidth": 640,
+        "minHeight": 480,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "icon": ["icons/icon.ico"],
+    "targets": "all"
+  }
+}
