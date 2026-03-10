@@ -44,6 +44,25 @@
     <LocalDebuggerCommandArguments>-ExecutionPolicy Bypass -File "$(SolutionDir)..\scripts\dev_example.ps1" vite_tailwind</LocalDebuggerCommandArguments>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
   </PropertyGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\app_builder.cpp" />
+    <ClCompile Include="..\..\src\event_bus.cpp" />
+    <ClCompile Include="..\..\rust\host\cpp\demo_bridge.cpp" />
+    <ClInclude Include="..\..\include\tauri_cpp\app_builder.hpp" />
+    <ClInclude Include="..\..\include\tauri_cpp\command_context.hpp" />
+    <ClInclude Include="..\..\include\tauri_cpp\event_bus.hpp" />
+    <ClInclude Include="..\..\include\tauri_cpp\frontend_config.hpp" />
+    <ClInclude Include="..\..\include\tauri_cpp\window_options.hpp" />
+    <ClInclude Include="..\..\rust\host\include\tauri_cpp\rust_bridge.hpp" />
+    <None Include="..\..\examples\vite_tailwind\index.html" />
+    <None Include="..\..\examples\vite_tailwind\src\main.js" />
+    <None Include="..\..\examples\vite_tailwind\src\style.css" />
+    <None Include="..\..\examples\vite_tailwind\src-tauri\src\lib.rs" />
+    <None Include="..\..\examples\vite_tailwind\src-tauri\src\main.rs" />
+    <None Include="..\..\examples\vite_tailwind\src-tauri\tauri.conf.json" />
+    <None Include="..\..\rust\host\src\bridge.rs" />
+    <None Include="..\..\rust\host\src\lib.rs" />
+  </ItemGroup>
   <ItemDefinitionGroup />
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
