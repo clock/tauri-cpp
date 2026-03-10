@@ -19,6 +19,10 @@ npm run bootstrap:windows
 Then either:
 
 - open `vs/tauri_cpp.sln`
+- set a `dev_*` project as startup and press `F5`
+- or run `npm run dev:plain_html`
+- or run `npm run dev:vite_tailwind`
+- or run `npm run dev:react_shadcn`
 - or run `cmake --preset windows-debug`
 
 ## Linux and macOS

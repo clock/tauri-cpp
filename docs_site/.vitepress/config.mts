@@ -16,6 +16,7 @@ export default defineConfig({
         items: [
           { text: "Quickstart", link: "/guide/quickstart" },
           { text: "Examples", link: "/guide/examples" },
+          { text: "Existing Projects", link: "/guide/existing-projects" },
           { text: "Performance", link: "/guide/performance" },
           { text: "Host Integration", link: "/guide/host-integration" }
         ]

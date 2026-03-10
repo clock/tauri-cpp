@@ -30,8 +30,12 @@
 After that:
 
 - open `vs/tauri_cpp.sln` in Visual Studio
+- set `dev_plain_html`, `dev_vite_tailwind`, or `dev_react_shadcn` as the startup project
+- press `F5`
 - or use `cmake --preset windows-debug`
-- or build one of the example frontends from npm workspaces
+- or use `npm run dev:plain_html`, `npm run dev:vite_tailwind`, or `npm run dev:react_shadcn`
+
+`F5` on a `dev_*` project runs a watched `tauri dev` session. Frontend changes reload through the dev server, and Rust changes rebuild through Cargo.
 
 ## Run and test
 
@@ -76,6 +80,24 @@ Package an app:
 npm run package:plain_html
 ```
 
+## important dev note
+
+Do not use raw `cargo run` for the Vite based debug apps. In debug they use a dev server URL, so use one of these instead:
+
+```powershell
+npm run dev:plain_html
+npm run dev:vite_tailwind
+npm run dev:react_shadcn
+```
+
+If you want to run without a dev server, use the release runner:
+
+```powershell
+npm run run:plain_html
+npm run run:vite_tailwind
+npm run run:react_shadcn
+```
+
 ## Examples
 
 - `examples/plain_html` is the default low overhead starter
@@ -86,6 +108,7 @@ npm run package:plain_html
 
 - repo docs live in `docs/`
 - the GitHub Pages site is built from `docs_site/`
+- existing project integration notes are in `docs/integration_existing_project.md`
 
 ## Status
 
