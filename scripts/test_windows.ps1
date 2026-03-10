@@ -1,3 +1,21 @@
-cmake --preset windows-debug
-cmake --build --preset windows-debug
-ctest --preset windows-debug
+$ErrorActionPreference = "Stop"
+$root_dir = Resolve-Path (Join-Path $PSScriptRoot "..")
+Push-Location $root_dir
+try {
+  cmake --preset windows-debug
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
+
+  cmake --build --preset windows-debug
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
+
+  ctest --preset windows-debug
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
+} finally {
+  Pop-Location
+}

@@ -6,6 +6,11 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$root_dir = Resolve-Path (Join-Path $PSScriptRoot "..")
+
+Push-Location $root_dir
+
+try {
 
 if (-not (Test-Path $ExecutablePath)) {
   throw "executable not found: $ExecutablePath"
@@ -26,3 +31,6 @@ $elapsed = (Get-Date) - $start_time
   working_set_mb = [math]::Round($sample.WorkingSet64 / 1MB, 2)
   private_memory_mb = [math]::Round($sample.PrivateMemorySize64 / 1MB, 2)
 } | ConvertTo-Json
+} finally {
+  Pop-Location
+}

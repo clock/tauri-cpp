@@ -11,6 +11,20 @@ if (Test-Path $cargo_bin) {
   $env:Path = "$cargo_bin;$env:Path"
 }
 
+$root_dir = Resolve-Path (Join-Path $PSScriptRoot "..")
+
+function Invoke-Step {
+  param(
+    [Parameter(ValueFromRemainingArguments = $true)]
+    [string[]]$Command
+  )
+
+  & $Command[0] $Command[1..($Command.Length - 1)]
+  if ($LASTEXITCODE -ne 0) {
+    exit $LASTEXITCODE
+  }
+}
+
 function Test-Command {
   param([string]$Name)
   return $null -ne (Get-Command $Name -ErrorAction SilentlyContinue)
@@ -85,17 +99,23 @@ if ($missing.Count -gt 0) {
   exit 1
 }
 
+Push-Location $root_dir
+
+try {
 if (-not $SkipNpmInstall) {
-  npm install
+  Invoke-Step npm install
 }
 
 if (-not $SkipCargoFetch) {
-  cargo fetch
+  Invoke-Step cargo fetch
 }
 
 if (-not $SkipCmake) {
-  cmake --preset windows-debug
+  Invoke-Step cmake --preset windows-debug
 }
 
 Write-Host ""
 Write-Host "bootstrap complete"
+} finally {
+  Pop-Location
+}
